@@ -1,0 +1,141 @@
+@use "../_partials/variables" as v;
+
+.fix-btn-valora {
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  position: fixed;
+  z-index: 1;
+  font-size: 1rem;
+  top: 50%;
+  color: v.$white;
+  background-color: v.$bg-color-secondary;
+  padding: 0.40rem;
+  right: 0;
+  a:hover {
+    color: v.$white;
+    text-decoration: none;
+  }
+}
+
+.custom {
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  width: 100%;
+
+  .img-slider {
+    max-height: 75vh;
+    width: 100%;
+  }
+
+  .text {
+    font-size: 8rem;
+    position: absolute;
+    // bottom: 25rem;
+    top: 26rem;
+    left: 24rem;
+    padding: 10px;
+    color: white;
+
+    span {
+      font-size: 3rem;
+      color: v.$color-secondary;
+    }
+  }
+
+  .move-down {
+    width: 5rem;
+    position: absolute;
+    top: 20rem;
+    transition: transform 0.3s ease; // Add a soft transition
+  }
+
+  .move-down:hover {
+    transform: translateY(
+      10px
+    ); // move the image down when the cursor is on top
+  }
+
+  .bottom-slider {
+    background-color: v.$bg-color-primary;
+    padding: 4.6rem;
+  }
+  .search {
+    margin: auto;
+    background-color: v.$bg-color-primary;
+    padding: 7rem;
+    padding-bottom: 3rem;
+  }
+
+  .container {
+    form {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 1px; // We reduce the space between the elements
+      .col-md-4 {
+        border-radius: none;
+        border: none;
+        flex: 1;
+        margin: 0;
+        // Margin-Right: 5px;// We adjust the right margin of the entrance fields
+      }
+
+      .form-control,
+      .form-select,
+      .btn {
+        padding: 1rem;
+        border-radius: 0;
+        border: 0;
+      }
+      .btn {
+        background-color: v.$color-btn-search;
+        border-color: v.$color-btn-search;
+        width: 10rem;
+      }
+      .small-image {
+        width: 25px;
+        float: left;
+        margin-right: 5px;
+      }
+    }
+    .extra-btns {
+      .btn1 {
+        padding: 1rem;
+        background-color: v.$features-darker;
+      }
+      .btn2 {
+        padding: 1rem;
+        background-color: v.$bg-color-secondary;
+      }
+      img {
+        width: 25px;
+        float: left;
+        margin-right: 5px;
+      }
+    }
+  }
+  .choose-future {
+    position: relative; // Establish the relative positioning context
+    text-align: center; // Align the text in the horizontal center
+
+    img {
+      max-width: 100%; // ensures that the image fits the container
+      display: block; // Eliminate vertical space under the image
+    }
+
+    p, .icon-v {
+      font-size: 50px;
+      color: v.$color-secondary;
+      position: absolute; // position the text absolutely in relation to the container
+      top: 6rem; // Place the text at the top
+      left: 50%; // The text aligns horizontally to the center
+      transform: translateX(
+        -50%
+      ); // Focuses the text in relation to the container
+      padding: 10px; // Add a filling around the text
+    }
+    .icon-v{
+      top: 14rem;
+      width: 5rem;
+    }
+  }
+}

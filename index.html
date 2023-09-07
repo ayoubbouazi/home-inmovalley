@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- My javascript -->
+    <script defer type="text/javascript" src="./js/index.js"></script>
+
+    <link rel="icon" href="./assets/icon_2.svg" />
+    <link rel="stylesheet" href="./SASS/styles.css" />
+    <title>Inicio | InmoValley</title>
+  </head>
+  <body>
+    <!-- Hearder -->
+    <div class="header">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="firstNav col-4 order-lg-2">
+            <a class="d-md-none close-sidebar" href="#">
+              <i class="fas fa-times"></i>
+            </a>
+
+            <div>
+              <div class="info">
+                <a href="#">966 274 206</a>
+              </div>
+
+              <ul class="list-inline">
+                <li class="list-inline-item active">
+                  <a href="#">INICIO</a>
+                </li>
+
+                <li class="dropdown hide-burger list-inline-item">
+                  <a
+                    href="#"
+                    class="dropdown-toggle"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    id="dropdownMenuLink1"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    >Propiedades</a
+                  >
+                </li>
+                <li class="list-inline-item hide-header">
+                  <a href="#">Vender</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-4 px-md-3 px-0 order-lg-3 text-center">
+            <a href="#" class="brand d-block d-lg-inline-block pt-lg-4">
+              <img
+                src="./assets/logo_header.svg"
+                alt="InmoValley Inmobiliaria"
+                class="img-fluid"
+              />
+            </a>
+          </div>
+          <div
+            class="col-lg-4 pl-xl-0 order-lg-last d-none d-lg-block text-lg-end text-nowrap"
+          >
+            <div class="d-inline-block detail pe-3">
+              <a href="#" class="info">info@inmovalley.com</a>
+            </div>
+
+            <div class="d-inline-block pe-3">
+              <div class="dropdown">
+                <button
+                  class="dropdown-toggle"
+                  type="button"
+                  id="languageDropdown"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <img src="./assets/eng_flag.svg" alt="" />
+                </button>
+                <div class="dropdown-menu" aria-labelledby="languageDropdown">
+                  <a class="dropdown-item" href="#">
+                    <img src="./assets/frenchflag.svg" alt="Flag 1" />
+                    Français
+                    <!-- Move the text next to the image tag -->
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <img src="./assets/esFlag.svg" alt="Flag 2" />
+                    Spanish
+                    <!-- Move the text next to the image tag -->
+                  </a>
+                </div>
+              </div>
+            </div>
+<!-- TODO: I NEED TO ADD FB ICON -->
+
+            <nav id="second-nav">
+              <ul class="list-inline d-inline">
+                <li class="no-hover list-inline-item">
+                  <a href="#"
+                    ><span class="favor"></span>
+                    <img src="./assets/icon_heart_fill.svg" alt="Favoritos" />
+                    <span id="budget-fav"></span
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">Contactar</a>
+                </li>
+              </ul>
+
+              <div class="d-inline-block text-white ps-3">
+                <a class="d-inline-block text-white" href="#">
+                  <img src="./assets/menu.svg" alt="Menu" class="me-2" />
+                  Menú
+                </a>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Button valora fix -->
+    <div class="fix-btn-valora">
+      <a href="#">Valora tu propiedad</a>
+    </div>
+
+    <!-- Container -->
+    <div class="custom">
+      <img class="img-slider" src="./assets/slider.jpg" alt="slider" />
+      <div class="text">
+        INMO <br />
+        V<span class="move-down"
+          ><img
+            src="./assets/Icon feather-arrow-down-circle.svg"
+            alt="" /></span
+        >ALLEY <span>Siempre a tu lado</span>
+      </div>
+      <div class="bottom-slider"></div>
+
+      <!-- SEARCH -->
+      <div class="search">
+        <div class="container">
+          <form class="row g-0">
+            <div class="col-md-4">
+              <select id="inputEstado" class="form-select">
+                <option selected>Estado...</option>
+                <!-- Opciones para el estado -->
+              </select>
+            </div>
+            <div class="col-md-4">
+              <select id="inputTipo" class="form-select">
+                <option selected>Tipo</option>
+                <!-- Options... -->
+              </select>
+            </div>
+            <div class="col-md-4">
+              <select id="inputPublacion" class="form-select">
+                <option selected>Publacion</option>
+                <!-- Options... -->
+              </select>
+            </div>
+            <div class="col-md-4">
+              <select id="inputZona" class="form-select">
+                <option selected>Zona</option>
+                <!-- Options... -->
+              </select>
+            </div>
+            <div class="col-md-4">
+              <select id="inputPrecio" class="form-select">
+                <option selected>Precio</option>
+                <!-- Options... -->
+              </select>
+            </div>
+            <div class="col-md-4">
+              <input
+                type="text"
+                class="form-control"
+                id="inputReferencia"
+                placeholder="Referencia"
+              />
+            </div>
+            <div class="col-md-4 d-flex align-items-end">
+              <button type="submit" class="btn btn-primary">
+                <img
+                  src="./assets/search.svg"
+                  alt="search"
+                  class="small-image"
+                />
+                Buscar
+              </button>
+            </div>
+          </form>
+          <div class="extra-btns row mt-2">
+            <div class="col-md-8 d-flex">
+              <button type="button" class="btn1 btn-secondary me-1">
+                <img src="./assets/eraser.svg" alt="Limpiar" class="btn-img" />
+                Limpiar Filtros
+              </button>
+              <button type="button" class="btn2 btn-secondary">
+                <img
+                  src="./assets/advanced search.svg"
+                  alt="Búsqueda Avanzada"
+                  class="btn-img"
+                />
+                Búsqueda Avanzada
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="choose-future">
+        <img src="./assets/image_banner.jpg" alt="image banner" />
+        <p>Elige tu futuro</p>
+        <img class="icon-v" src="./assets/icon logo.svg" alt="">
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <!-- Footer Container -->
+      <div class="footer__container">
+        <div class="footer__container__image">
+          <img src="./assets/logo_header.svg" alt="footer-image" />
+        </div>
+
+        <div>
+          <p><a href="#">966 274 206</a></p>
+          <p><a href="#">info@inmovalley.com</a></p>
+
+          <ul class="nav-menu">
+            <li><a href="#">INICIO</a></li>
+            <li><a href="#">Empresa</a></li>
+            <li><a href="#">Propiedades</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Vender</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contactar</a></li>
+            <li><img src="./assets/icon_heart_fill.svg" alt="heart" /></li>
+          </ul>
+        </div>
+
+        <div class="dropdown">
+          <button
+            class="dropdown-toggle"
+            type="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <img src="./assets/eng_flag.svg" alt="" />
+          </button>
+          <div class="dropdown-menu" aria-labelledby="languageDropdown">
+            <a class="dropdown-item" href="#">
+              <img src="./assets/frenchflag.svg" alt="Flag 1" />
+              Français
+              <!-- Move the text next to the image tag -->
+            </a>
+            <a class="dropdown-item" href="#">
+              <img src="./assets/esFlag.svg" alt="Flag 2" />
+              Spanish
+              <!-- Move the text next to the image tag -->
+            </a>
+          </div>
+        </div>
+      </div>
+<!-- TODO: I NEED TO ADD FB ICON -->
+
+      <!-- Footer legal -->
+      <div class="footer__legal">
+        <ul class="footer__legal__policies">
+          <li>© 2023 INMOVALLEY ·</li>
+          <li><a href="#">Nota legal</a></li>
+          <li>●</li>
+          <li>
+            <a href="#">Privacidad</a>
+          </li>
+          <li>●</li>
+          <li><a href="#">cookies</a></li>
+          <li>●</li>
+          <li><a href="#">Mapa Web</a></li>
+        </ul>
+        <ul class="footer__design">
+          <li class="footer__legal__policies__design">
+            Diseño: <span><a href="">MEDIAELX</a></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

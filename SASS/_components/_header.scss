@@ -1,0 +1,55 @@
+@use "../_partials/variables" as v;
+
+.header {
+  font-family: "Montserrat", sans-serif;
+  background-color: v.$bg-color-primary;
+  color: v.$white;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  // align-items: center;
+
+  &__container {
+    justify-content: space-between;
+    &__nav-menu {
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap; /* Avoid line jump from the elements */
+
+      &__imgHeader {
+        width: 15rem;
+        margin: 1rem 10rem;
+      }
+
+      &__imgHeart {
+        width: 1.5rem;
+        margin-left: 10px;
+      }
+
+      &__top {
+        display: flex;
+        align-items: center;
+        margin-right: 10px; /* Add margin to separate from the last list item */
+        p {
+          margin: 0;
+        }
+      }
+
+      li {
+        margin: 0 10px; /* Adjust the horizontal margin */
+      }
+
+      a {
+        text-decoration: none;
+        color: v.$white;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

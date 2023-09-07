@@ -1,0 +1,158 @@
+@use "../_partials/variables" as v;
+
+.footer {
+  font-family: "Montserrat", sans-serif;
+  background-color: v.$bg-color-primary;
+  position: absolute;
+  width: 100%;
+  color: v.$white;
+  font-weight: 350;
+  @include flex(column, nowrap, center, center);
+  font-size: 0.9rem;
+
+  &__container {
+    padding: 2rem;
+    text-align: center;
+    margin: 2rem;
+
+    &__image {
+      margin: auto;
+      width: 15rem;
+    }
+    p {
+      font-size: 2.5rem;
+      padding: 1rem;
+      margin: 2rem;
+      a:hover {
+        color: v.$hover-footer;
+        text-decoration: none;
+      }
+    }
+    ul {
+      cursor: pointer;
+      padding: 2rem;
+      list-style-type: none; // Remove default list styles
+      display: flex; // Display the list items in a row
+      flex-wrap: wrap; // Allow items to wrap to the next line if needed
+      a {
+        padding: 0.35rem;
+      }
+      li {
+        margin: 0 0.75rem; // Apply margin to both left and right sides of each li
+        font-weight: bold;
+        a:hover {
+          color: v.$white;
+          background-color: v.$bg-color-secondary;
+          text-decoration: none;
+        }
+        img {
+          margin-top: 0.7rem;
+        }
+      }
+    }
+  }
+  .active {
+    padding: 0.2rem;
+    background-color: v.$bg-color-secondary;
+    color: v.$white; /* Optional: Set text color to white when active */
+  }
+
+  .dropdown {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    button {
+      border: 0;
+      padding: 0.75rem;
+      &:hover {
+        // width: 200px; // Set the width on hover
+        border-radius: 0;
+        background-color: v.$bg-color-secondary; // Change background color on hover
+        // transition: width 0.3s ease; // Smoothly transition the width change
+      }
+    }
+    .dropdown-menu {
+      background-color: v.$bg-color-primary;
+      border: none;
+
+      a {
+        color: v.$white;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          background-color: v.$bg-color-secondary; // Change text color on hover
+        }
+
+        img {
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .dropdown-toggle {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: 5px;
+      }
+
+      &::after {
+        content: "";
+        border: solid transparent;
+        border-width: 5px 5px 0 5px;
+        border-color: v.$white transparent transparent transparent; // Arrow color
+        margin-left: 5px; // Adjust the distance of the arrow from the image
+      }
+    }
+  }
+
+  &__legal {
+    @include flex(row, wrap, center, center);
+    width: 100%;
+    background-color: v.$bg-color-secondary;
+    text-align: center;
+    // width: 780rem;
+
+    &__policies {
+      @include flex(row, wrap, center, center);
+      padding: 2rem;
+      margin: 0;
+      li {
+        margin: 0.25rem;
+
+        a:hover {
+          text-decoration: none;
+          color: v.$hover-footer;
+        }
+
+        &:not(:last-child) {
+          &::after {
+            // content: "●";
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__design {
+    @include flex(row, wrap, center, center);
+    margin: 0;
+    margin-left: 13rem;
+    span {
+      padding: 0;
+      // margin-left: 0.5rem;
+      font-weight: bolder;
+    }
+    a {
+      display: inline;
+    }
+    a:hover {
+      text-decoration: none;
+      color: v.$hover-footer;
+    }
+  }
+}

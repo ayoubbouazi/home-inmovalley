@@ -1,0 +1,473 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+/* We define the Custom Properties */
+:root {
+  /* Colors */
+  --black: #333333;
+  --white: #fff;
+  /* Typography */
+  --tipo-principal: "Montserrat", sans-serif;
+  --tipo-secundaria: sans-serif;
+}
+
+/* We reset the Margin and Paddings of all labels */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+*::before,
+*::after {
+  display: block;
+}
+
+/* We avoid problems with images */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* (Opcional) */
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* (Opcional) */
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+/* We reset the links to function as boxes... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... except those found in paragraphs */
+p a {
+  display: inline;
+}
+
+/* We remove the points of the <li> */
+li {
+  list-style-type: none;
+}
+
+/* (Optional) We configure soft anchors */
+html {
+  scroll-behavior: smooth;
+}
+
+/* We disable default styles of the main text labels */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* We avoid problems with the pseudoements of quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* (Optional) We configure the text we select */
+::-moz-selection {
+  background-color: var(--black);
+  color: var(--white);
+}
+::selection {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+/* We level types of typefaces and placement of forms */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* (Opcional) */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+/* We reset the tables */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* We avoid problems with SVG*/
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* We configure the typography for the entire website */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--tipo-principal);
+  color: var(--black);
+  /* (Optional) */
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  /* (Optional) */
+  font-smooth: always;
+  /* (Optional) */
+  -webkit-font-smoothing: antialiased;
+  /* (Optional) */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.header {
+  font-family: "Montserrat", sans-serif;
+  background-color: #181d24;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+}
+.header__container {
+  justify-content: space-between;
+}
+.header__container__nav-menu {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap; /* Avoid line jump from the elements */
+}
+.header__container__nav-menu__imgHeader {
+  width: 15rem;
+  margin: 1rem 10rem;
+}
+.header__container__nav-menu__imgHeart {
+  width: 1.5rem;
+  margin-left: 10px;
+}
+.header__container__nav-menu__top {
+  display: flex;
+  align-items: center;
+  margin-right: 10px; /* Add margin to separate from the last list item */
+}
+.header__container__nav-menu__top p {
+  margin: 0;
+}
+.header__container__nav-menu li {
+  margin: 0 10px; /* Adjust the horizontal margin */
+}
+.header__container__nav-menu a {
+  text-decoration: none;
+  color: #fff;
+}
+.header__container__nav-menu a:hover {
+  text-decoration: underline;
+}
+
+.fix-btn-valora {
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  position: fixed;
+  z-index: 1;
+  font-size: 1rem;
+  top: 50%;
+  color: #fff;
+  background-color: #978510;
+  padding: 0.4rem;
+  right: 0;
+}
+.fix-btn-valora a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.custom {
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  width: 100%;
+}
+.custom .img-slider {
+  max-height: 75vh;
+  width: 100%;
+}
+.custom .text {
+  font-size: 8rem;
+  position: absolute;
+  top: 26rem;
+  left: 24rem;
+  padding: 10px;
+  color: white;
+}
+.custom .text span {
+  font-size: 3rem;
+  color: #978510;
+}
+.custom .move-down {
+  width: 5rem;
+  position: absolute;
+  top: 20rem;
+  transition: transform 0.3s ease;
+}
+.custom .move-down:hover {
+  transform: translateY(10px);
+}
+.custom .bottom-slider {
+  background-color: #181d24;
+  padding: 4.6rem;
+}
+.custom .search {
+  margin: auto;
+  background-color: #181d24;
+  padding: 7rem;
+  padding-bottom: 3rem;
+}
+.custom .container form {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1px;
+}
+.custom .container form .col-md-4 {
+  border-radius: none;
+  border: none;
+  flex: 1;
+  margin: 0;
+}
+.custom .container form .form-control,
+.custom .container form .form-select,
+.custom .container form .btn {
+  padding: 1rem;
+  border-radius: 0;
+  border: 0;
+}
+.custom .container form .btn {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  width: 10rem;
+}
+.custom .container form .small-image {
+  width: 25px;
+  float: left;
+  margin-right: 5px;
+}
+.custom .container .extra-btns .btn1 {
+  padding: 1rem;
+  background-color: rgba(78, 74, 65, 0.9725490196);
+}
+.custom .container .extra-btns .btn2 {
+  padding: 1rem;
+  background-color: #978510;
+}
+.custom .container .extra-btns img {
+  width: 25px;
+  float: left;
+  margin-right: 5px;
+}
+.custom .choose-future {
+  position: relative;
+  text-align: center;
+}
+.custom .choose-future img {
+  max-width: 100%;
+  display: block;
+}
+.custom .choose-future p, .custom .choose-future .icon-v {
+  font-size: 50px;
+  color: #978510;
+  position: absolute;
+  top: 6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+}
+.custom .choose-future .icon-v {
+  top: 14rem;
+  width: 5rem;
+}
+
+.footer {
+  font-family: "Montserrat", sans-serif;
+  background-color: #181d24;
+  position: absolute;
+  width: 100%;
+  color: #fff;
+  font-weight: 350;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+}
+.footer__container {
+  padding: 2rem;
+  text-align: center;
+  margin: 2rem;
+}
+.footer__container__image {
+  margin: auto;
+  width: 15rem;
+}
+.footer__container p {
+  font-size: 2.5rem;
+  padding: 1rem;
+  margin: 2rem;
+}
+.footer__container p a:hover {
+  color: #ffc107;
+  text-decoration: none;
+}
+.footer__container ul {
+  cursor: pointer;
+  padding: 2rem;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer__container ul a {
+  padding: 0.35rem;
+}
+.footer__container ul li {
+  margin: 0 0.75rem;
+  font-weight: bold;
+}
+.footer__container ul li a:hover {
+  color: #fff;
+  background-color: #978510;
+  text-decoration: none;
+}
+.footer__container ul li img {
+  margin-top: 0.7rem;
+}
+.footer .active {
+  padding: 0.2rem;
+  background-color: #978510;
+  color: #fff; /* Optional: Set text color to white when active */
+}
+.footer .dropdown {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.footer .dropdown button {
+  border: 0;
+  padding: 0.75rem;
+}
+.footer .dropdown button:hover {
+  border-radius: 0;
+  background-color: #978510;
+}
+.footer .dropdown .dropdown-menu {
+  background-color: #181d24;
+  border: none;
+}
+.footer .dropdown .dropdown-menu a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.footer .dropdown .dropdown-menu a:hover {
+  background-color: #978510;
+}
+.footer .dropdown .dropdown-menu a img {
+  margin-right: 5px;
+}
+.footer .dropdown .dropdown-toggle {
+  display: flex;
+  align-items: center;
+}
+.footer .dropdown .dropdown-toggle img {
+  margin-right: 5px;
+}
+.footer .dropdown .dropdown-toggle::after {
+  content: "";
+  border: solid transparent;
+  border-width: 5px 5px 0 5px;
+  border-color: #fff transparent transparent transparent;
+  margin-left: 5px;
+}
+.footer__legal {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #978510;
+  text-align: center;
+}
+.footer__legal__policies {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin: 0;
+}
+.footer__legal__policies li {
+  margin: 0.25rem;
+}
+.footer__legal__policies li a:hover {
+  text-decoration: none;
+  color: #ffc107;
+}
+.footer__legal__policies li:not(:last-child)::after {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.footer__design {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin-left: 13rem;
+}
+.footer__design span {
+  padding: 0;
+  font-weight: bolder;
+}
+.footer__design a {
+  display: inline;
+}
+.footer__design a:hover {
+  text-decoration: none;
+  color: #ffc107;
+}
+
+body {
+  background-color: #333333;
+  overflow-x: hidden;
+  scroll-behavior: smooth !important;
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+::-webkit-scrollbar {
+  width: 0.7rem;
+  height: 0.7rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #4d4d4d;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+}/*# sourceMappingURL=styles.css.map */

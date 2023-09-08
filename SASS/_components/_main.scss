@@ -9,7 +9,7 @@
   top: 50%;
   color: v.$white;
   background-color: v.$bg-color-secondary;
-  padding: 0.40rem;
+  padding: 0.4rem;
   right: 0;
   a:hover {
     color: v.$white;
@@ -70,10 +70,10 @@
     form {
       display: flex;
       flex-wrap: nowrap;
-      gap: 1px; // We reduce the space between the elements
+      gap: 0; // We reduce the space between the elements
       .col-md-4 {
-        border-radius: none;
-        border: none;
+        border-radius: 0;
+        border: 0;
         flex: 1;
         margin: 0;
         // Margin-Right: 5px;// We adjust the right margin of the entrance fields
@@ -86,9 +86,18 @@
         border-radius: 0;
         border: 0;
       }
+      // TODO: HOVER FORM
+      // .form-control:hover,
+      // .form-select:hover,
+      // .btn:hover{
+      //   border-color: v.$color-yellow;
+
+      // }
       .btn {
-        background-color: v.$color-btn-search;
-        border-color: v.$color-btn-search;
+        color: v.$white;
+        font-weight: bold;
+        background-color: v.$color-yellow;
+        border-color: v.$color-yellow;
         width: 10rem;
       }
       .small-image {
@@ -98,6 +107,9 @@
       }
     }
     .extra-btns {
+      color: v.$white;
+      font-weight: bold;
+      gap: 0; // We reduce the space between the elements
       .btn1 {
         padding: 1rem;
         background-color: v.$features-darker;
@@ -114,28 +126,151 @@
     }
   }
   .choose-future {
-    position: relative; // Establish the relative positioning context
-    text-align: center; // Align the text in the horizontal center
+    position: relative;
+    text-align: center;
 
     img {
-      max-width: 100%; // ensures that the image fits the container
-      display: block; // Eliminate vertical space under the image
+      max-width: 100%;
+      display: block;
     }
 
-    p, .icon-v {
+    p,
+    .icon-v,
+    .cards {
       font-size: 50px;
       color: v.$color-secondary;
-      position: absolute; // position the text absolutely in relation to the container
-      top: 6rem; // Place the text at the top
-      left: 50%; // The text aligns horizontally to the center
-      transform: translateX(
-        -50%
-      ); // Focuses the text in relation to the container
-      padding: 10px; // Add a filling around the text
+      position: absolute;
+      top: 6rem;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px;
     }
-    .icon-v{
-      top: 14rem;
+
+    .icon-v {
+      top: 18rem;
       width: 5rem;
     }
+
+    .cards {
+      width: 65%;
+      height: 52%;
+      top: 27rem;
+      z-index: 1;
+
+      h5 {
+        font-size: 20px;
+      }
+
+      span {
+        font-size: 10px;
+      }
+
+      .card {
+        height: 100%;
+        color: v.$white;
+        border: 0;
+        border-radius: 0;
+        background-color: v.$bg-color-primary;
+        position: relative;
+        transform: translateZ(0);
+
+        h5 {
+          color: v.$white;
+        }
+
+        .square {
+          width: 45px;
+          height: 9rem;
+          position: absolute;
+          left: 0;
+
+          &.top-left {
+            background-color: v.$color-yellow;
+            top: 0;
+
+            // &:before {
+            //   content: "";
+            //   position: absolute;
+            //   z-index: -1;
+            //   top: 0;
+            //   left: 0;
+            //   right: 0;
+            //   bottom: 0;
+            //   background: v.$bg-color-primary;
+            //   transform: scaleY(0);
+            //   transform-origin: 50% 100%;
+            //   transition-property: transform;
+            //   transition-duration: 0.5s;
+            //   transition-timing-function: ease-out;
+            // }
+          }
+
+          &.bottom-left {
+            background-color: v.$black-light;
+            bottom: 0;
+          }
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: v.$color-yellow;
+          transform: scaleY(0);
+          transform-origin: 50% 100%;
+          transition-property: transform;
+          transition-duration: 0.3s;
+          transition-timing-function: ease-out;
+        }
+
+        &:hover {
+          border: 0;
+          border-radius: 0;
+          .square.top-left {
+            transform: scaleY(1);
+            background-color: v.$bg-color-primary; // Cambia 'new-color' al color que desees
+          }
+  
+          &:before {
+            transform: scaleY(1);
+          }
+        }
+
+        // &:hover:before {
+        //   transform: scaleY(1);
+
+        //   &.square.top-left {
+        //     transform: scaleY(1);
+        //   }
+        // }
+      }
+    }
+
+    // .card:before {
+    //   content: "";
+    //   position: absolute;
+    //   z-index: -1;
+    //   top: 0;
+    //   left: 0;
+    //   right: 0;
+    //   bottom: 0;
+    //   background: #2098d1;
+    //   transform: scaleY(0);
+    //   transform-origin: 50% 100%;
+    //   transition-property: transform;
+    //   transition-duration: 0.3s;
+    //   transition-timing-function: ease-out;
+    // }
+    // .card:hover,
+    // .card:focus,
+    // .card:active {
+    //   color: white;
+    // }
+    // .card:hover:before {
+    //   transform: scaleY(1);
+    // }
   }
 }

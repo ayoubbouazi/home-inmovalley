@@ -241,11 +241,11 @@ body {
 .custom .container form {
   display: flex;
   flex-wrap: nowrap;
-  gap: 1px;
+  gap: 0;
 }
 .custom .container form .col-md-4 {
-  border-radius: none;
-  border: none;
+  border-radius: 0;
+  border: 0;
   flex: 1;
   margin: 0;
 }
@@ -257,6 +257,8 @@ body {
   border: 0;
 }
 .custom .container form .btn {
+  color: #fff;
+  font-weight: bold;
   background-color: #ffc107;
   border-color: #ffc107;
   width: 10rem;
@@ -265,6 +267,11 @@ body {
   width: 25px;
   float: left;
   margin-right: 5px;
+}
+.custom .container .extra-btns {
+  color: #fff;
+  font-weight: bold;
+  gap: 0;
 }
 .custom .container .extra-btns .btn1 {
   padding: 1rem;
@@ -287,7 +294,9 @@ body {
   max-width: 100%;
   display: block;
 }
-.custom .choose-future p, .custom .choose-future .icon-v {
+.custom .choose-future p,
+.custom .choose-future .icon-v,
+.custom .choose-future .cards {
   font-size: 50px;
   color: #978510;
   position: absolute;
@@ -297,8 +306,72 @@ body {
   padding: 10px;
 }
 .custom .choose-future .icon-v {
-  top: 14rem;
+  top: 18rem;
   width: 5rem;
+}
+.custom .choose-future .cards {
+  width: 65%;
+  height: 52%;
+  top: 27rem;
+  z-index: 1;
+}
+.custom .choose-future .cards h5 {
+  font-size: 20px;
+}
+.custom .choose-future .cards span {
+  font-size: 10px;
+}
+.custom .choose-future .cards .card {
+  height: 100%;
+  color: #fff;
+  border: 0;
+  border-radius: 0;
+  background-color: #181d24;
+  position: relative;
+  transform: translateZ(0);
+}
+.custom .choose-future .cards .card h5 {
+  color: #fff;
+}
+.custom .choose-future .cards .card .square {
+  width: 45px;
+  height: 9rem;
+  position: absolute;
+  left: 0;
+}
+.custom .choose-future .cards .card .square.top-left {
+  background-color: #ffc107;
+  top: 0;
+}
+.custom .choose-future .cards .card .square.bottom-left {
+  background-color: #3c4146;
+  bottom: 0;
+}
+.custom .choose-future .cards .card:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffc107;
+  transform: scaleY(0);
+  transform-origin: 50% 100%;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.custom .choose-future .cards .card:hover {
+  border: 0;
+  border-radius: 0;
+}
+.custom .choose-future .cards .card:hover .square.top-left {
+  transform: scaleY(1);
+  background-color: #181d24;
+}
+.custom .choose-future .cards .card:hover:before {
+  transform: scaleY(1);
 }
 
 .footer {
@@ -465,7 +538,7 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #4d4d4d;
+  background: #3c4146;
 }
 
 ::-webkit-scrollbar-thumb {

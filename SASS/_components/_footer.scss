@@ -24,7 +24,7 @@
       padding: 1rem;
       margin: 2rem;
       a:hover {
-        color: v.$hover-footer;
+        color: v.$color-yellow;
         text-decoration: none;
       }
     }
@@ -124,7 +124,7 @@
 
         a:hover {
           text-decoration: none;
-          color: v.$hover-footer;
+          color: v.$color-yellow;
         }
 
         &:not(:last-child) {
@@ -152,7 +152,7 @@
     }
     a:hover {
       text-decoration: none;
-      color: v.$hover-footer;
+      color: v.$color-yellow;
     }
   }
 }

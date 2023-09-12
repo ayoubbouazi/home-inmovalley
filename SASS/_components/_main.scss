@@ -1,5 +1,6 @@
 @use "../_partials/variables" as v;
 
+// button valora tu preioredad
 .fix-btn-valora {
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
@@ -9,6 +10,7 @@
   top: 50%;
   color: v.$white;
   background-color: v.$bg-color-secondary;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.14);
   padding: 0.4rem;
   right: 0;
   a:hover {
@@ -17,66 +19,140 @@
   }
 }
 
+// Whatssap icon
+.fix-wsp-icon {
+  position: fixed;
+  bottom: -64px;
+  right: 20px;
+  z-index: 999;
+  transition: bottom 0.3s ease;
+  img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.fix-wsp-icon.show {
+  bottom: 20px;
+}
+
+// ----- Body -----
 .custom {
   font-family: "Montserrat", sans-serif;
   position: relative;
   width: 100%;
 
   .img-slider {
-    max-height: 75vh;
+    margin-top: 2.5rem;
+    max-height: 77vh;
     width: 100%;
   }
 
   .text {
-    font-size: 8rem;
+    font-size: 3rem;
     position: absolute;
-    // bottom: 25rem;
-    top: 26rem;
-    left: 24rem;
+    top: 25rem;
+    left: 32rem;
     padding: 10px;
-    color: white;
+    color: v.$white;
 
-    span {
-      font-size: 3rem;
+    .left-animation {
+      animation: leftAnimation 1s ease-out forwards;
+      opacity: 0;
+      transform: translateX(-100%);
+      display: inline-block;
+
+      .inmo,
+      .v,
+      .alley {
+        display: inline-block;
+        font-size: 8rem;
+      }
+    }
+
+    .side-animation {
       color: v.$color-secondary;
+
+      font-family: v.$special-font;
+      animation: bottomAnimation 1s ease-out forwards;
+      opacity: 0;
+      transform: translateY(100%);
+      display: inline-block;
     }
   }
 
+  @keyframes leftAnimation {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes bottomAnimation {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
   .move-down {
     width: 5rem;
     position: absolute;
-    top: 20rem;
-    transition: transform 0.3s ease; // Add a soft transition
+    top: 40;
+    left: 40rem;
   }
 
   .move-down:hover {
-    transform: translateY(
-      10px
-    ); // move the image down when the cursor is on top
+    transform: translateY(10px);
   }
-
-  .bottom-slider {
+  .rectangle-dark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
     background-color: v.$bg-color-primary;
-    padding: 4.6rem;
+    padding-top: 15rem;
+    padding-bottom: 13rem;
+    .property-title {
+      h1 {
+        letter-spacing: 4px;
+        font-size: 55px;
+        text-align: center;
+        color: v.$white;
+        font-weight: 300;
+        span {
+          font-family: v.$special-font;
+          font-weight: 400;
+          font-size: 40px;
+          display: block;
+          color: v.$color-secondary;
+          margin-top: -1.5rem;
+          margin-left: 1rem;
+        }
+      }
+    }
   }
   .search {
-    margin: auto;
-    background-color: v.$bg-color-primary;
-    padding: 7rem;
-    padding-bottom: 3rem;
+    padding-bottom: 9rem !important;
   }
-
+  // comtainer search
   .container {
     form {
       display: flex;
       flex-wrap: nowrap;
-      gap: 0; // We reduce the space between the elements
+      gap: 0;
       .col-md-4 {
         border-radius: 0;
         border: 0;
         flex: 1;
         margin: 0;
-        // Margin-Right: 5px;// We adjust the right margin of the entrance fields
       }
 
       .form-control,
@@ -85,20 +161,22 @@
         padding: 1rem;
         border-radius: 0;
         border: 0;
+        font-style: italic;
+        &:focus {
+          box-shadow: none;
+          border: 1px solid v.$darker;
+        }
       }
-      // TODO: HOVER FORM
-      // .form-control:hover,
-      // .form-select:hover,
-      // .btn:hover{
-      //   border-color: v.$color-yellow;
-
-      // }
       .btn {
+        font-style: normal;
         color: v.$white;
         font-weight: bold;
         background-color: v.$color-yellow;
         border-color: v.$color-yellow;
         width: 10rem;
+        &:hover {
+          border: 0;
+        }
       }
       .small-image {
         width: 25px;
@@ -106,17 +184,23 @@
         margin-right: 5px;
       }
     }
+    // Buttons down of de form
     .extra-btns {
       color: v.$white;
       font-weight: bold;
-      gap: 0; // We reduce the space between the elements
+      gap: 0;
       .btn1 {
+        width: 20rem;
         padding: 1rem;
         background-color: v.$features-darker;
       }
       .btn2 {
+        width: 20rem;
         padding: 1rem;
         background-color: v.$bg-color-secondary;
+        &:hover {
+          background-color: #94862e;
+        }
       }
       img {
         width: 25px;
@@ -124,7 +208,13 @@
         margin-right: 5px;
       }
     }
+    // background-image
+    .background-image {
+      width: 10%;
+    }
   }
+
+  //Elige tu futuro
   .choose-future {
     position: relative;
     text-align: center;
@@ -133,11 +223,15 @@
       max-width: 100%;
       display: block;
     }
-
+    p {
+      font-family: v.$special-font;
+    }
     p,
     .icon-v,
     .cards {
-      font-size: 50px;
+      font-weight: 500;
+      letter-spacing: 4px;
+      font-size: 58px;
       color: v.$color-secondary;
       position: absolute;
       top: 6rem;
@@ -189,22 +283,6 @@
 
             background-color: v.$color-yellow;
             top: 0;
-
-            // &:before {
-            //   content: "";
-            //   position: absolute;
-            //   z-index: -1;
-            //   top: 0;
-            //   left: 0;
-            //   right: 0;
-            //   bottom: 0;
-            //   background: v.$bg-color-primary;
-            //   transform: scaleY(0);
-            //   transform-origin: 50% 100%;
-            //   transition-property: transform, background-color; // Agrega 'background-color' para la transición de color
-            //   transition-duration: 0.3s;
-            //   transition-timing-function: ease-out;
-            // }
           }
 
           &.bottom-left {
@@ -240,14 +318,14 @@
           }
         }
         .card-body {
-          position: relative; // Agrega una posición relativa para el card-body
-          overflow: hidden; // Oculta cualquier contenido que se desborde
+          position: relative;
+          overflow: hidden;
 
           h5 {
             color: v.$color-yellow;
-            transform: scale(1); // Escala normal
+            transform: scale(1);
 
-            transition: transform 0.4s; // Duración de la transición en hover
+            transition: transform 0.4s;
           }
 
           .card-text {
@@ -271,10 +349,9 @@
             top: 3rem;
             left: 5.5rem;
             width: 1.2rem;
-            // height: 2%;
-            transform: scale(1); // Escala normal
-            transition: transform 0.4s; // Duración de la transición en hover
-            object-fit: cover; // Ajusta el tamaño de la imagen para cubrir el contenedor
+            transform: scale(1);
+            transition: transform 0.4s;
+            object-fit: cover;
           }
         }
 
@@ -282,11 +359,539 @@
         &:hover {
           h5,
           img {
-            transform: scale(1); // Escala la imagen al 110% en hover
+            transform: scale(1);
           }
           h5 {
             color: v.$white;
           }
+        }
+      }
+    }
+  }
+
+  .property-container {
+    background-image: url("../../assets/image_background.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+    .property-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      top: -9rem;
+      padding: 20px;
+      width: 60%;
+      margin: auto;
+
+      .property-image {
+        top: 2rem;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+
+        img {
+          transition: transform 0.9s ease;
+        }
+      }
+
+      .property-details {
+        height: 20rem;
+        width: 28rem;
+        color: v.$white;
+        background-color: v.$black-light;
+        // padding: 20px;
+        position: relative;
+        right: 3rem;
+        top: 2rem;
+        transition: transform 0.3s ease;
+        .head {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 2rem;
+
+          .ref {
+            font-weight: 500;
+            text-align: center;
+            width: 10rem;
+            padding: 2rem;
+            background-color: v.$color-secondary;
+            padding: 0 !important;
+            margin-right: 10px;
+          }
+          img {
+            margin-right: 3rem;
+            width: 2rem;
+          }
+        }
+        .body {
+          padding: 20px;
+          padding-top: 0;
+          h2 {
+            font-weight: bold;
+          }
+          h3 {
+            font-weight: bold;
+          }
+          p strong {
+            font-weight: 700;
+          }
+          .price {
+            font-size: 28px;
+            color: v.$color-yellow;
+          }
+        }
+        h2 {
+          font-size: 24px;
+          margin-top: 10px;
+        }
+        a {
+          text-decoration: none;
+          color: #007bff;
+          display: block;
+          margin-top: 20px;
+        }
+      }
+    }
+
+    // Agregamos el hover para ambos elementos
+    .property-info {
+      &:hover {
+        .property-image img {
+          transform: scale(1.1);
+        }
+        .property-details {
+          background-color: v.$bg-color-primary;
+          transform: translateX(2rem);
+        }
+      }
+    }
+
+    // SELL PROP
+    .sell-property {
+      display: flex;
+      justify-content: center;
+      height: 100vh;
+      .sell-Left {
+        img {
+          width: 7rem;
+          margin-bottom: 2rem;
+        }
+        h1 {
+          letter-spacing: 4px;
+          font-size: 55px;
+          color: v.$white;
+          font-weight: 300;
+          margin-bottom: 4rem;
+
+          span {
+            font-family: v.$special-font;
+            font-weight: 400;
+            font-size: 40px;
+            display: block;
+            color: v.$color-secondary;
+            margin-top: -1.5rem;
+          }
+        }
+        button {
+          color: v.$white;
+          font-weight: bold;
+          width: 15rem;
+          padding: 0.75rem;
+          background-color: v.$bg-color-secondary;
+          &:hover {
+            background-color: #94862e;
+          }
+        }
+      }
+
+      .sell-right {
+        img {
+          width: 20rem;
+        }
+      }
+    }
+  }
+
+  //Properties Featured
+  .properties-featured {
+    background-color: v.$bg-color-primary;
+    color: v.$white;
+    padding: 10rem;
+    max-height: 175vh;
+    .prop-featured-title {
+      h1 {
+        font-family: v.$special-font;
+        letter-spacing: 4px;
+        font-size: 55px;
+        text-align: center;
+        color: v.$white;
+        font-weight: 300;
+        span {
+          font-weight: 400;
+          font-size: 40px;
+          display: block;
+          color: v.$color-secondary;
+          margin-top: -1.5rem;
+          margin-left: 1rem;
+        }
+      }
+    }
+
+    .prop-featured-info {
+      .container {
+        .row {
+          .column {
+            .card {
+              border-radius: 0;
+              background-color: v.$bg-color-primary;
+              color: v.$white;
+              border: 0;
+              transition: background-color 0.3s;
+              overflow: hidden;
+              img {
+                border: 0;
+                border-radius: 0;
+                transition: transform 0.9s;
+              }
+              .card-body {
+                transition: background-color 1.4s;
+                z-index: 1;
+              }
+            }
+
+            // i added the hover for both elements
+            &:hover {
+              .card img {
+                transform: scale(1.1);
+              }
+              .card-body {
+                color: v.$darker;
+                background-color: v.$bg-color-secondary;
+              }
+            }
+          }
+        }
+      }
+
+      // Button all prop
+      .btn-all-prop {
+        padding: 5rem;
+        margin: auto;
+        width: 22rem;
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+
+          span {
+            font-family: v.$special-font;
+            color: v.$color-secondary;
+            margin-right: 20px;
+            transition: transform 0.3s ease;
+
+            &:hover {
+              transform: translateX(30px);
+            }
+          }
+
+          img {
+            width: 4rem;
+            transition: transform 0.7s;
+          }
+          &:hover {
+            img {
+              transform: rotateY(180deg);
+            }
+            span {
+              color: v.$white;
+              transform: translateX(30px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Welcome & description
+  .description-inmovalley {
+    background-color: v.$bg-color-primary;
+    padding-top: 7rem;
+
+    .column {
+      flex: 1;
+      .img-icon {
+        margin-left: 10rem;
+        width: 8rem;
+      }
+      p {
+        margin-left: 10rem;
+        margin-top: 2rem;
+        font-weight: 600;
+        &.text1 {
+          color: v.$color-secondary;
+        }
+        &.text2 {
+          color: v.$white;
+        }
+      }
+      .btn {
+        margin-top: 1rem;
+        margin-left: 10rem;
+        color: v.$color-secondary;
+        border-color: v.$bg-color-secondary;
+        border-radius: 0;
+        width: 15rem;
+        font-size: 18px;
+        &:hover {
+          color: v.$white;
+          background-color: v.$bg-color-secondary;
+        }
+      }
+      .img-fluid {
+        height: 90%;
+        margin-left: auto;
+        width: auto;
+      }
+    }
+  }
+
+  // Last News
+  .last-news {
+    background-color: v.$white;
+    padding: 8rem;
+    .container {
+      .row {
+        .col1 {
+          margin-left: 4rem;
+          color: v.$darker;
+          display: flex;
+          align-items: center;
+          position: relative;
+          .rotate-text {
+            font-weight: 300;
+            letter-spacing: 10px;
+            width: 60%;
+            margin-left: 16rem;
+            margin-top: 6rem;
+            font-size: 75px;
+            transform: rotate(-90deg);
+            transform-origin: left bottom;
+            display: inline-block;
+
+            img {
+              margin-top: 5rem;
+              width: 7rem;
+              transition: transform 0.7s;
+              &:hover {
+                transform: rotateX(-180deg);
+              }
+            }
+            span {
+              font-family: v.$special-font;
+              font-size: 3rem;
+              color: v.$color-secondary;
+              font-weight: 400;
+              font-size: 40px;
+              display: block;
+              color: v.$color-secondary;
+              margin-top: -2.6rem;
+            }
+          }
+        }
+
+        /*Style for the "New1" class */
+        .new1 {
+          position: absolute;
+          top: 0;
+          left: 0.75rem;
+          color: v.$white;
+          font-weight: bold;
+          padding: 10px;
+          width: 100%;
+          box-sizing: border-box;
+          font-size: 12px;
+          text-align: left;
+          z-index: 1;
+          &:hover {
+            color: v.$white;
+          }
+          p {
+            margin: 1rem;
+          }
+        }
+
+        .col2 {
+          margin-left: 8rem;
+        }
+        .col3 {
+          margin-left: 1rem;
+        }
+        .col2,
+        .col3 {
+          padding: 0;
+          position: relative;
+
+          .img-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+
+            .img-fluid {
+              width: 100%;
+              transition: transform 0.3s;
+            }
+            //  Yellow Background
+            .overlay2 {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              height: auto;
+              width: auto;
+              opacity: 0;
+              transition: 0.5s ease;
+              background-color: v.$color-secondary;
+            }
+
+            // DARK SQUARE
+            .overlay1 {
+              position: absolute;
+              bottom: 0;
+              left: 1rem;
+              width: 12%;
+              height: 0;
+              background-color: v.$darker;
+              transition: height 0.3s, opacity 0.3s;
+              opacity: 0;
+              color: #fff;
+              padding: 10px;
+              box-sizing: border-box;
+              z-index: 1;
+            }
+            .arrow-right {
+              opacity: 0;
+              width: 1.2rem;
+              position: absolute;
+              top: 90%;
+              left: 90%;
+              transform: translate(-50%, -50%);
+              font-size: 24px;
+              color: #fff;
+            }
+
+            &:hover {
+              .overlay1 {
+                width: 12%;
+                height: 25%;
+                opacity: 1;
+              }
+              .overlay2 {
+                opacity: 0.8;
+              }
+              .arrow-right {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Contact US
+  .contact-container {
+    height: 100vh;
+    background-color: v.$bg-color-secondary;
+    align-items: center;
+    .contact-title {
+      padding: 6rem;
+      h1 {
+        font-weight: bold;
+        letter-spacing: 4px;
+        font-size: 55px;
+        text-align: center;
+        font-weight: 300;
+        color: v.$darker;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        span {
+          margin: -1.4rem;
+          font-family: v.$special-font;
+          font-weight: 400;
+          color: v.$white;
+          font-size: 40px;
+          display: block;
+        }
+      }
+    }
+    .form-contact {
+      width: 34%;
+      // Apply the style to your input fields
+      .form-control {
+        border: 0;
+        border-radius: 0;
+        border-bottom: 1px solid v.$white;
+        background-color: v.$bg-color-secondary;
+        font-weight: 400;
+        color: v.$white;
+        background-color: transparent;
+        &::placeholder {
+          font-style: italic;
+          color: v.$white;
+        }
+        &:focus {
+          background-color: v.$color-secondary;
+          box-shadow: none;
+        }
+      }
+      .form-check-input {
+        &[type="checkbox"] {
+          border-color: 1px solid v.$darker;
+          width: 5rem;
+          height: 2.3rem;
+          margin-right: 2rem;
+          border-radius: 50%;
+          background-color: v.$color-secondary;
+          border: 2px solid v.$white;
+          cursor: pointer;
+          transition: background-color 0.3s;
+          box-shadow: none;
+          border: 1px solid v.$white;
+        }
+        &:checked {
+          box-shadow: none;
+          background-color: v.$darker;
+          border-color: v.$darker;
+        }
+      }
+      label {
+        font-size: 11px;
+        span {
+          font-weight: bold;
+        }
+      }
+      button {
+        width: 50%;
+        background-color: v.$bg-color-primary;
+        color: white;
+        padding: 10px 20px;
+        border: 0;
+        border-radius: 0;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      p {
+        height: 3rem;
+        overflow: scroll;
+        font-size: 11px;
+        span {
+          font-size: bold;
         }
       }
     }

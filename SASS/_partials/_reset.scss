@@ -75,11 +75,6 @@ blockquote:before, blockquote:after, q:before, q:after {
   content: none;
 }
 
-/* (Optional) We configure the text we select */
-::selection {
-  background-color: var(--black);
-  color: var(--white);
-}
 
 /* We level types of typefaces and placement of forms */
 form, input, textarea, select, button, label {
@@ -111,7 +106,7 @@ body {
   min-height: 100vh;
   font-size: 100%;
   font-family: var(--tipo-principal);
-  color: var(--black);
+  color: var(--white);
   /* (Optional) */
   hyphens: auto;
   /* (Optional) */

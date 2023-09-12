@@ -31,14 +31,14 @@
     ul {
       cursor: pointer;
       padding: 2rem;
-      list-style-type: none; // Remove default list styles
-      display: flex; // Display the list items in a row
-      flex-wrap: wrap; // Allow items to wrap to the next line if needed
+      list-style-type: none;
+      display: flex;
+      flex-wrap: wrap;
       a {
         padding: 0.35rem;
       }
       li {
-        margin: 0 0.75rem; // Apply margin to both left and right sides of each li
+        margin: 0 0.75rem;
         font-weight: bold;
         a:hover {
           color: v.$white;
@@ -54,9 +54,13 @@
   .active {
     padding: 0.2rem;
     background-color: v.$bg-color-secondary;
-    color: v.$white; /* Optional: Set text color to white when active */
+    color: v.$white;
   }
-
+  .facebook {
+    color: v.$white;
+    font-size: 18px;
+    margin: 5px;
+  }
   .dropdown {
     display: flex;
     justify-content: center;
@@ -65,17 +69,16 @@
       border: 0;
       padding: 0.75rem;
       &:hover {
-        // width: 200px; // Set the width on hover
         border-radius: 0;
         background-color: v.$bg-color-secondary; // Change background color on hover
-        // transition: width 0.3s ease; // Smoothly transition the width change
       }
     }
     .dropdown-menu {
       background-color: v.$bg-color-primary;
       border: none;
-
+      font-size: 14px;
       a {
+        font-weight: bold;
         color: v.$white;
         display: flex;
         align-items: center;
@@ -85,6 +88,7 @@
         }
 
         img {
+          width: 2rem;
           margin-right: 5px;
         }
       }

@@ -159,4 +159,18 @@
       color: v.$color-yellow;
     }
   }
+
+  @media (max-width: 768px) {
+    .nav-menu{
+      // margin-top: 5rem;
+      padding: 1rem;
+      display: block;
+      width: 30%;
+      margin: auto;
+      text-align: center;
+      li{
+        margin: 0.8rem;
+      }
+    }
+  }
 }

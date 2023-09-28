@@ -235,7 +235,51 @@ body {
   background-color: #978510;
   color: #fff;
 }
+.header .respo-menu {
+  display: none;
+}
 
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+  .header {
+    font-size: 0.8rem; /* Adjust font size for smaller screens */
+  }
+  .header .container {
+    padding: 0.2rem; /* Adjust padding for smaller screens */
+  }
+  .header .container .row .side1,
+  .header .container .row .hide {
+    display: none !important;
+  }
+  .header .respo-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #181d24;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    display: block;
+    padding: 2rem;
+  }
+  .header .respo-menu a {
+    text-align: left;
+    margin: 0;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #978510;
+    font-size: 15px;
+  }
+  .header .respo-menu .menu-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+}
 .fix-btn-valora {
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
@@ -1189,6 +1233,18 @@ body {
 .footer__design a:hover {
   text-decoration: none;
   color: #ffc107;
+}
+@media (max-width: 768px) {
+  .footer .nav-menu {
+    padding: 1rem;
+    display: block;
+    width: 30%;
+    margin: auto;
+    text-align: center;
+  }
+  .footer .nav-menu li {
+    margin: 0.8rem;
+  }
 }
 
 /* Define styles for the modal */

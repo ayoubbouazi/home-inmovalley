@@ -119,4 +119,60 @@
     background-color: v.$bg-color-secondary;
     color: v.$white;
   }
+
+  // Menu when its responsive
+  .respo-menu {
+    display: none;
+  }
+}
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+  .header {
+    
+    font-size: 0.8rem; /* Adjust font size for smaller screens */
+
+    .container {
+      padding: 0.2rem; /* Adjust padding for smaller screens */
+
+      .row {
+        // .logo {
+        //   display: none; /* Hide the logo on smaller screens */
+        // }
+
+        .side1,
+        .hide {
+          display: none !important;
+        }
+      }
+    }
+
+    .respo-menu {
+      position: fixed;
+      top: 0;
+      left: -250px; // Inicialmente oculto
+      width: 250px;
+      height: 100%;
+      background-color: v.$bg-color-primary; // Color de fondo del menú
+      z-index: 1000;
+      transition: left 0.3s ease; // Transición de deslizamiento
+      display: block;
+      padding: 2rem;
+      a {
+        text-align: left;
+        margin: 0;
+        padding: 10px;
+        text-decoration: none;
+        font-weight: 500;
+        color: v.$color-secondary; // Color de texto del menú
+        font-size: 15px;
+      }
+      .menu-button {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        cursor: pointer;
+        z-index: 1001;
+      }
+    }
+  }
 }

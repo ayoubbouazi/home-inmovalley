@@ -87,7 +87,7 @@
             </a>
           </div>
           <div class="side2 col-4">
-            <div class="d-inline-block detail">
+            <div class="hide d-inline-block detail">
               <a href="#" class="info-contact">info@inmovalley.com</a>
             </div>
 
@@ -115,11 +115,11 @@
                 </div>
               </div>
             </div>
-            <div class="facebook d-inline-block">
+            <div class="hide facebook d-inline-block">
               <i class="fab fa-facebook-f"></i>
             </div>
 
-            <nav>
+            <nav class="hide">
               <ul class="list-inline d-inline">
                 <li class="no-hover list-inline-item">
                   <a href="#" class="d-flex align-items-center">
@@ -128,10 +128,10 @@
                   </a>
                 </li>
 
-                <li class="list-inline-item">
+                <li class="hide list-inline-item">
                   <a href="#">Contactar</a>
                 </li>
-                <li class="menu list-inline-item">
+                <li class="hide menu list-inline-item">
                   <a
                     class="d-inline-flex align-items-center"
                     href="#"
@@ -143,6 +143,97 @@
                 </li>
               </ul>
             </nav>
+
+            <!-- MEEUN WHEN IT RESPONSIVE -->
+            <div class="respo-menu">
+              <div class="menu-button">
+                <button id="menu-toggle">&#9776;</button>
+              </div>
+              <div class="sidr-class-detail">
+                <a href="tel:966274206">966 274 206</a>
+              </div>
+
+              <ul class="sidr-class-list-inline">
+                <li class="sidr-class-list-inline-item sidr-class-active">
+                  <a href="/">Inicio</a>
+                </li>
+
+                <li class="sidr-class-list-inline-item sidr-class-hide-header">
+                  <a href="/sobre-nosotros/">Empresa</a>
+                </li>
+
+                <li
+                  class="sidr-class-dropdown sidr-class-hide-burger sidr-class-list-inline-item"
+                >
+                  <a
+                    href="/propiedades/"
+                    class="sidr-class-dropdown-toggle"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    id="sidr-id-dropdownMenuLink1"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    >Propiedades</a
+                  >
+                  <ul
+                    class="sidr-class-dropdown-menu sidr-class-animated sidr-class-fadeIn"
+                    aria-labelledby="dropdownMenuLink1"
+                  >
+                    <li class="sidr-class-dropdown-item">
+                      <a href="/propiedades/">Ver todas las propiedades</a>
+                    </li>
+                    <li class="sidr-class-dropdown-item">
+                      <a href="/propiedades-alquiler-a-largo-plazo/"
+                        >Alquiler a largo plazo</a
+                      >
+                    </li>
+                    <li class="sidr-class-dropdown-item">
+                      <a href="/propiedades-nueva-construccion/"
+                        >Nueva construcción
+                      </a>
+                    </li>
+                    <li class="sidr-class-dropdown-item">
+                      <a href="/propiedades-venta/">Venta</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li
+                  class="sidr-class-list-inline-item sidr-class-hide-header sidr-class-hide-footer"
+                >
+                  <a href="/propiedades/">Propiedades</a>
+                </li>
+
+                <li class="sidr-class-list-inline-item sidr-class-hide-header">
+                  <a href="/servicios/">Servicios</a>
+                </li>
+
+                <li class="sidr-class-list-inline-item">
+                  <a href="/vender-su-propiedad/">Vender</a>
+                </li>
+
+                <li class="sidr-class-list-inline-item sidr-class-hide-header">
+                  <a href="/noticias/">Blog</a>
+                </li>
+
+                <li class="sidr-class-list-inline-item sidr-class-hide-header">
+                  <a href="/contacto/">Contactar</a>
+                </li>
+
+                <li
+                  class="sidr-class-no-hover sidr-class-list-inline-item sidr-class-hide-header"
+                >
+                  <a href="/favoritos/"
+                    ><span class="sidr-class-favor"></span>
+                    <img
+                      src="/media/images/website/icon-feather-heart-full.svg"
+                      alt="Favoritos" />
+                    <span id="sidr-id-budget-fav"></span
+                  ></a>
+                </li>
+              </ul>
+            </div>
+
             <!-- Modal HTML -->
             <div id="miModal" class="modal miModal">
               <div class="modal-content">

@@ -297,6 +297,14 @@ body {
   color: #fff;
   text-decoration: none;
 }
+@media screen and (max-width: 940px) {
+  .fix-btn-valora {
+    font-size: 0.8rem;
+    padding: 0.3rem;
+    right: 80%;
+    top: 90%;
+  }
+}
 
 .fix-wsp-icon {
   position: fixed;
@@ -325,10 +333,9 @@ body {
   width: 100%;
 }
 .custom .text {
-  font-size: 3rem;
   position: absolute;
-  top: 25rem;
-  left: 32rem;
+  top: 5%;
+  left: 15%;
   padding: 10px;
   color: #fff;
 }
@@ -351,6 +358,74 @@ body {
   opacity: 0;
   transform: translateY(100%);
   display: inline-block;
+  font-size: 5rem;
+}
+@media screen and (max-width: 1366px) {
+  .custom .text {
+    top: 4.7%;
+    left: 15%;
+  }
+  .custom .text .left-animation .inmo,
+  .custom .text .left-animation .v,
+  .custom .text .left-animation .alley {
+    font-size: 6rem;
+  }
+  .custom .text .side-animation {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 940px) {
+  .custom .text {
+    top: 3%;
+    left: 8%;
+  }
+  .custom .text .left-animation .inmo,
+  .custom .text .left-animation .v,
+  .custom .text .left-animation .alley {
+    font-size: 4rem;
+  }
+  .custom .text .side-animation {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .custom .text {
+    top: 2%;
+    left: 5%;
+  }
+  .custom .text .left-animation .inmo,
+  .custom .text .left-animation .v,
+  .custom .text .left-animation .alley {
+    font-size: 2rem;
+  }
+  .custom .text .side-animation {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .custom .text {
+    top: 1%;
+    left: 2%;
+  }
+  .custom .text .left-animation .inmo,
+  .custom .text .left-animation .v,
+  .custom .text .left-animation .alley {
+    font-size: 2rem;
+  }
+  .custom .text .left-animation .side-animation {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 480px) and (max-width: 320px) {
+  .custom .text {
+    top: 1%;
+    left: 2%;
+  }
+  .custom .text .left-animation .inmo,
+  .custom .text .left-animation .v,
+  .custom .text .left-animation .alley {
+    font-size: 1.5rem;
+  }
 }
 @keyframes leftAnimation {
   0% {
@@ -375,11 +450,61 @@ body {
 .custom .move-down {
   width: 5rem;
   position: absolute;
-  top: 40;
-  left: 40rem;
+  top: 8.9%;
+  left: 20%;
 }
 .custom .move-down:hover {
   transform: translateY(10px);
+}
+@media screen and (max-width: 1366px) {
+  .custom .move-down {
+    width: 4rem;
+    top: 7.8%;
+    left: 20%;
+  }
+  .custom .move-down:hover {
+    transform: translateY(9px);
+  }
+}
+@media screen and (max-width: 940px) {
+  .custom .move-down {
+    width: 3rem;
+    top: 6%;
+    left: 12%;
+  }
+  .custom .move-down:hover {
+    transform: translateY(8px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .custom .move-down {
+    width: 2rem;
+    top: 4.5%;
+    left: 8%;
+  }
+  .custom .move-down:hover {
+    transform: translateY(7px);
+  }
+}
+@media screen and (max-width: 480px) {
+  .custom .move-down {
+    width: 2rem;
+    top: 3.5%;
+    left: 5%;
+  }
+  .custom .move-down:hover {
+    transform: translateY(6px);
+  }
+}
+@media screen and (max-width: 320px) {
+  .custom .move-down {
+    width: 2rem;
+    top: 3.5%;
+    left: 5%;
+  }
+  .custom .move-down:hover {
+    transform: translateY(6px);
+  }
 }
 .custom .rectangle-dark {
   display: flex;
@@ -405,9 +530,6 @@ body {
   color: #978510;
   margin-top: -1.5rem;
   margin-left: 1rem;
-}
-.custom .search {
-  padding-bottom: 9rem !important;
 }
 .custom .container form {
   display: flex;
@@ -475,6 +597,84 @@ body {
 }
 .custom .container .background-image {
   width: 10%;
+}
+@media screen and (max-width: 1200px) {
+  .custom .container form .form-control,
+  .custom .container form .form-select,
+  .custom .container form .btn {
+    font-size: 0.8rem;
+  }
+  .custom .container form .btn {
+    padding: 0.81rem;
+  }
+  .custom .container form .small-image {
+    width: 25px;
+  }
+  .custom .container .extra-btns {
+    font-size: 0.8rem;
+  }
+  .custom .container .extra-btns .btn1 {
+    width: 16rem;
+    padding: 0.7rem;
+  }
+  .custom .container .extra-btns .btn2 {
+    width: 16rem;
+    padding: 0.7rem;
+  }
+  .custom .container .extra-btns img {
+    width: 22px;
+  }
+}
+@media screen and (max-width: 940px) {
+  .custom .container form {
+    float: left;
+    width: 60%;
+    display: block;
+  }
+  .custom .container form .col-md-4 {
+    width: 80%;
+    border-radius: 0;
+  }
+  .custom .container form .btn {
+    width: 100%;
+  }
+  .custom .container .extra-btns {
+    float: right;
+    display: block;
+    width: 40%;
+    font-size: 0.8rem;
+  }
+  .custom .container .extra-btns .col-md-8 {
+    margin-top: 50%;
+    display: block !important;
+  }
+  .custom .container .extra-btns .col-md-8 .btn1 {
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .custom .container form {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+  .custom .container form .col-md-4 {
+    width: 100%;
+  }
+  .custom .container form .form-control,
+  .custom .container form .form-select,
+  .custom .container form .btn {
+    font-size: 0.6rem;
+  }
+  .custom .container form .btn {
+    padding: 0.6rem;
+  }
+  .custom .container form .small-image {
+    width: 15px;
+  }
+  .custom .container .extra-btns {
+    display: none;
+  }
 }
 .custom .choose-future {
   position: relative;

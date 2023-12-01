@@ -17,6 +17,12 @@
     color: v.$white;
     text-decoration: none;
   }
+  @media screen and (max-width: 940px) {
+    font-size: 0.8rem;
+    padding: 0.3rem;
+    right: 80%;
+    top: 90%;
+  }
 }
 
 // Whatssap icon
@@ -48,11 +54,11 @@
     width: 100%;
   }
 
+  // Title Inmovally In the Header of the page with responsive "Inmo vally siempre en tu lado"
   .text {
-    font-size: 3rem;
     position: absolute;
-    top: 25rem;
-    left: 32rem;
+    top: 5%;
+    left: 15%;
     padding: 10px;
     color: v.$white;
 
@@ -72,12 +78,82 @@
 
     .side-animation {
       color: v.$color-secondary;
-
       font-family: v.$special-font;
       animation: bottomAnimation 1s ease-out forwards;
       opacity: 0;
       transform: translateY(100%);
       display: inline-block;
+      font-size: 5rem;
+    }
+
+    @media screen and (max-width: 1366px) {
+      top: 4.7%;
+      left: 15%;
+      .left-animation {
+        .inmo,
+        .v,
+        .alley {
+          font-size: 6rem;
+        }
+      }
+
+      .side-animation {
+        font-size: 4rem;
+      }
+    }
+
+    @media screen and (max-width: 940px) {
+      top: 3%;
+      left: 8%;
+      .left-animation {
+        .inmo,
+        .v,
+        .alley {
+          font-size: 4rem;
+        }
+      }
+      .side-animation {
+        font-size: 3rem;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      top: 2%;
+      left: 5%;
+      .left-animation {
+        .inmo,
+        .v,
+        .alley {
+          font-size: 2rem;
+        }
+      }
+      .side-animation {
+        font-size: 2rem;
+      }
+    }
+    @media screen and (max-width: 480px) {
+      top: 1%;
+      left: 2%;
+      .left-animation {
+        .inmo,
+        .v,
+        .alley {
+          font-size: 2rem;
+        }
+        .side-animation {
+          font-size: 1rem;
+        }
+      }
+      @media screen and (max-width: 320px) {
+        top: 1%;
+        left: 2%;
+        .left-animation {
+          .inmo,
+          .v,
+          .alley {
+            font-size: 1.5rem;
+          }
+        }
+      }
     }
   }
 
@@ -102,16 +178,71 @@
       opacity: 1;
     }
   }
+
+  // Button down with arrow in the header of the page
   .move-down {
     width: 5rem;
     position: absolute;
-    top: 40;
-    left: 40rem;
+    top: 8.9%;
+    left: 20%;
   }
 
   .move-down:hover {
     transform: translateY(10px);
   }
+  @media screen and (max-width: 1366px) {
+    .move-down {
+      width: 4rem;
+      top: 7.8%;
+      left: 20%;
+    }
+    .move-down:hover {
+      transform: translateY(9px);
+    }
+  }
+  @media screen and (max-width: 940px) {
+    .move-down {
+      width: 3rem;
+      top: 6%;
+      left: 12%;
+    }
+    .move-down:hover {
+      transform: translateY(8px);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .move-down {
+      width: 2rem;
+      top: 4.5%;
+      left: 8%;
+    }
+    .move-down:hover {
+      transform: translateY(7px);
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .move-down {
+      width: 2rem;
+      top: 3.5%;
+      left: 5%;
+    }
+    .move-down:hover {
+      transform: translateY(6px);
+    }
+  }
+  @media screen and (max-width: 320px) {
+    .move-down {
+      width: 2rem;
+      top: 3.5%;
+      left: 5%;
+    }
+    .move-down:hover {
+      transform: translateY(6px);
+    }
+  }
+
+  // ---------------------------------------------------------
+
   .rectangle-dark {
     display: flex;
     justify-content: center;
@@ -138,9 +269,11 @@
         }
       }
     }
+    @media screen and (max-width: 1366px) {
+    }
   }
   .search {
-    padding-bottom: 9rem !important;
+    // padding-bottom: 7rem !important;
   }
   // comtainer search
   .container {
@@ -211,6 +344,89 @@
     // background-image
     .background-image {
       width: 10%;
+    }
+
+    @media screen and (max-width: 1200px) {
+      form {
+        .form-control,
+        .form-select,
+        .btn {
+          font-size: 0.8rem;
+        }
+        .btn {
+          padding: 0.81rem;
+        }
+        .small-image {
+          width: 25px;
+        }
+      }
+      .extra-btns {
+        font-size: 0.8rem;
+        .btn1 {
+          width: 16rem;
+          padding: 0.7rem;
+        }
+        .btn2 {
+          width: 16rem;
+          padding: 0.7rem;
+        }
+        img {
+          width: 22px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 940px) {
+      form {
+        float: left;
+        width: 60%;
+        display: block;
+        .col-md-4 {
+          width: 80%;
+          border-radius: 0;
+        }
+        .btn {
+          width: 100%;
+        }
+      }
+      .extra-btns {
+        float: right;
+        display: block;
+        width: 40%;
+        font-size: 0.8rem;
+        .col-md-8 {
+          margin-top: 50%;
+          display: block !important;
+          .btn1 {
+            margin-bottom: 3rem;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      form {
+        width: 100%;
+        float: none;
+        text-align: center;
+        .col-md-4 {
+          width: 100%;
+        }
+        .form-control,
+        .form-select,
+        .btn {
+          font-size: 0.6rem;
+        }
+        .btn {
+          padding: 0.6rem;
+        }
+        .small-image {
+          width: 15px;
+        }
+      }
+      .extra-btns {
+        display: none;
+      }
     }
   }
 

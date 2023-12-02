@@ -1,6 +1,6 @@
 @use "../_partials/variables" as v;
 
-// button valora tu preioredad
+// button valora tu preioredad with responsive
 .fix-btn-valora {
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
@@ -37,16 +37,15 @@
     height: 70px;
   }
 }
-
 .fix-wsp-icon.show {
   bottom: 20px;
 }
 
-// ----- Body -----
+// ------------------------------ Body ------------------------------
 .custom {
   font-family: "Montserrat", sans-serif;
   position: relative;
-  width: 100%;
+  width: 100% !important;
 
   .img-slider {
     margin-top: 2.5rem;
@@ -211,7 +210,7 @@
     }
   }
   @media screen and (max-width: 768px) {
-    .move-down {
+    container .move-down {
       width: 2rem;
       top: 4.5%;
       left: 8%;
@@ -250,8 +249,9 @@
     height: 25vh;
     background-color: v.$bg-color-primary;
     padding-top: 15rem;
-    padding-bottom: 13rem;
+    padding-bottom: 7rem;
     .property-title {
+      margin-bottom: 8rem;
       h1 {
         letter-spacing: 4px;
         font-size: 55px;
@@ -269,13 +269,13 @@
         }
       }
     }
-    @media screen and (max-width: 1366px) {
+
+    @media screen and (max-width: 940px) {
+      padding-bottom: 13rem;
     }
   }
-  .search {
-    // padding-bottom: 7rem !important;
-  }
-  // comtainer search
+
+  // comtainer search with responsive
   .container {
     form {
       display: flex;
@@ -312,7 +312,7 @@
         }
       }
       .small-image {
-        width: 25px;
+        width: 24px;
         float: left;
         margin-right: 5px;
       }
@@ -434,6 +434,14 @@
   .choose-future {
     position: relative;
     text-align: center;
+    .img-choose-future {
+      @media screen and (max-width: 940px) {
+        width: 200%;
+      }
+      @media screen and (max-width: 480px) {
+        width: 400% !important;
+      }
+    }
 
     img {
       max-width: 100%;
@@ -441,11 +449,27 @@
     }
     p {
       font-family: v.$special-font;
+      @media screen and (max-width: 940px) {
+        font-size: 48px !important;
+        top: 6rem !important;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 36px !important;
+        top: 4rem !important;
+      }
+      @media screen and (max-width: 480px) {
+        font-size: 24px !important;
+        top: 2rem !important;
+      }
+      @media screen and (max-width: 320px) {
+        font-size: 14px !important;
+        top: 1rem !important;
+      }
     }
     p,
     .icon-v,
     .cards {
-      font-weight: 500;
+      font-weight: 600;
       letter-spacing: 4px;
       font-size: 58px;
       color: v.$color-secondary;
@@ -459,6 +483,26 @@
     .icon-v {
       top: 18rem;
       width: 5rem;
+      @media screen and (max-width: 1500px) {
+        top: 14rem;
+      }
+
+      @media screen and (max-width: 940px) {
+        width: 4rem;
+        top: 14rem;
+      }
+      @media screen and (max-width: 768px) {
+        width: 3rem;
+        top: 10rem;
+      }
+      @media screen and (max-width: 480px) {
+        width: 2.5rem;
+        top: 6rem;
+      }
+      @media screen and (max-width: 320px) {
+        width: 2rem;
+        top: 4rem;
+      }
     }
 
     .cards {
@@ -582,6 +626,87 @@
           }
         }
       }
+
+      @media screen and (max-width: 1500px) {
+        width: 80%;
+        height: 55%;
+        top: 22rem;
+        h5 {
+          margin-left: 2rem;
+          font-size: 18px !important;
+        }
+        .card-text {
+          left: 10% !important;
+        }
+        h6 {
+          font-size: 24px !important;
+        }
+        span {
+          font-size: 12px !important;
+        }
+        .square {
+          width: 2.5rem !important;
+          height: 5.5rem !important;
+        }
+      }
+      @media screen and (max-width: 1366px) {
+        top: 21rem;
+      }
+      @media screen and (max-width: 1275px) {
+        top: 18rem;
+      }
+      @media screen and (max-width: 940px) {
+        height: 40%;
+        top: 25rem;
+        h5 {
+          font-size: 14px !important;
+        }
+        span {
+          font-size: 8px !important;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        height: 40%;
+        top: 25rem;
+
+        h5 {
+          margin-left: 1.5rem;
+          font-size: 16px !important;
+        }
+        .card-text {
+          left: 10% !important;
+        }
+        h6 {
+          font-size: 18px !important;
+        }
+        span {
+          font-size: 8px !important;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        width: 60%;
+        height: 90%;
+        top: 8rem;
+        margin: auto;
+        h5 {
+          margin-left: 1.5rem;
+          font-size: 12px !important;
+        }
+        .card-text {
+          left: 4% !important;
+        }
+        h6 {
+          font-size: 14px !important;
+        }
+        span {
+          font-size: 7px !important;
+        }
+        .col-sm-4 {
+          margin-bottom: 1rem;
+        }
+      }
     }
   }
 
@@ -602,6 +727,8 @@
       margin: auto;
 
       .property-image {
+        // width: 150% !important;
+        // height: 42vh !important;
         top: 2rem;
         height: auto;
         position: relative;
@@ -670,6 +797,17 @@
           margin-top: 20px;
         }
       }
+      @media screen and (max-width: 940px) {
+        display: block;
+        .property-details {
+          width: 100%;
+          top: 0;
+          right: 0;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        width: 90%;
+      }
     }
 
     // Agregamos el hover para ambos elementos
@@ -681,6 +819,9 @@
         .property-details {
           background-color: v.$bg-color-primary;
           transform: translateX(2rem);
+          @media screen and (max-width: 940px) {
+            transform: translateX(0);
+          }
         }
       }
     }
@@ -690,6 +831,7 @@
       display: flex;
       justify-content: center;
       height: 100vh;
+      // width: 80%;
       .sell-Left {
         img {
           width: 7rem;
@@ -726,6 +868,67 @@
       .sell-right {
         img {
           width: 20rem;
+        }
+      }
+
+      @media screen and (max-width: 940px) {
+        width: 80%;
+        margin: 0 auto;
+        .sell-Left {
+          h1 {
+            font-size: 35px;
+          }
+          button {
+            width: 10rem;
+            padding: 0.5rem;
+            font-size: 14px;
+          }
+        }
+      }
+      @media screen and (max-width: 768px) {
+        width: 90%;
+        margin: 0 auto;
+        .sell-Left {
+          h1 {
+            font-size: 25px;
+            span {
+              margin-top: 0.1px;
+              font-size: 25px;
+            }
+          }
+
+          button {
+            width: 10rem;
+            font-size: 12px;
+          }
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+        .sell-Left {
+          margin: 0 ;
+          text-align: center;
+          .logo{
+            width: 30%;
+          }
+          h1 {
+            font-size: 20px;
+            margin-bottom: 0.5rem;
+            span {
+              margin-top: 0.1px;
+              font-size: 20px;
+            }
+          }
+
+          button {
+            margin: auto;
+            width: 7rem;
+            font-size: 12px;
+            margin-bottom: 0.5rem;
+          }
         }
       }
     }

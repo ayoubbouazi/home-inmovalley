@@ -435,11 +435,14 @@
     position: relative;
     text-align: center;
     .img-choose-future {
-      @media screen and (max-width: 940px) {
-        width: 200%;
-      }
-      @media screen and (max-width: 480px) {
-        width: 400% !important;
+      img {
+        @media screen and (max-width: 940px) {
+          // width: 200%;
+          height: 120vh !important;
+        }
+        @media screen and (max-width: 480px) {
+          // width: 400% !important;
+        }
       }
     }
 
@@ -686,7 +689,7 @@
         }
       }
       @media screen and (max-width: 480px) {
-        width: 60%;
+        width: 90%;
         height: 90%;
         top: 8rem;
         margin: auto;
@@ -909,9 +912,9 @@
         margin: 0 auto;
         display: block;
         .sell-Left {
-          margin: 0 ;
+          margin: 0;
           text-align: center;
-          .logo{
+          .logo {
             width: 30%;
           }
           h1 {

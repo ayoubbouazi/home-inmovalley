@@ -67,12 +67,12 @@ $(document).ready(function () {
 
   // Function to close the menu
   function closeMenu() {
-    respoMenu.animate({ left: "-250px" }, 20);
+    respoMenu.animate({ left: "-300px" }, 20);
     menuButton.html("&#9776;"); // Change button to open icon
   }
 
   menuButton.click(function () {
-    if (respoMenu.css("left") === "-250px") {
+    if (respoMenu.css("left") === "-300px") {
       respoMenu.animate({ left: "0" }, 20);
       menuButton.html("&#10005;"); // Change button to close icon
     } else {

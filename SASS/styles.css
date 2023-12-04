@@ -1499,7 +1499,7 @@ body {
 }
 @media screen and (max-height: 600px) {
   .custom .description-inmovalley {
-    margin-top: 250px;
+    margin-top: 300px;
   }
 }
 .custom .last-news {
@@ -1860,6 +1860,11 @@ body {
 @media screen and (max-height: 600px) {
   .custom .contact-container {
     height: 150vh;
+  }
+}
+@media screen and (max-height: 768px) {
+  .custom .contact-container {
+    height: 110vh;
   }
 }
 

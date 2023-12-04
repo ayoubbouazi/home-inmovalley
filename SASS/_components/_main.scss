@@ -1256,7 +1256,7 @@
       }
     }
     @media screen and (max-height: 600px) {
-      margin-top: 250px;
+      margin-top: 300px;
     }
   }
 
@@ -1638,6 +1638,9 @@
     }
     @media screen and (max-height: 600px) {
       height: 150vh;
+    }
+    @media screen and (max-height: 768px) {
+      height: 110vh;
     }
   }
 }

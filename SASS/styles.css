@@ -1824,6 +1824,9 @@ body {
   }
 }
 @media screen and (max-width: 768px) {
+  .custom .contact-container {
+    height: auto;
+  }
   .custom .contact-container .contact-title {
     padding: 2rem;
   }
@@ -1860,11 +1863,6 @@ body {
 @media screen and (max-height: 600px) {
   .custom .contact-container {
     height: 150vh;
-  }
-}
-@media screen and (max-height: 768px) {
-  .custom .contact-container {
-    height: 110vh;
   }
 }
 

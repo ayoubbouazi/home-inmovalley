@@ -1601,6 +1601,7 @@
       }
     }
     @media screen and (max-width: 768px) {
+      height: auto;
       .contact-title {
         padding: 2rem;
         h1 {
@@ -1636,11 +1637,9 @@
         }
       }
     }
+
     @media screen and (max-height: 600px) {
       height: 150vh;
-    }
-    @media screen and (max-height: 768px) {
-      height: 110vh;
     }
   }
 }

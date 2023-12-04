@@ -23,6 +23,9 @@
     right: 80%;
     top: 90%;
   }
+  @media screen and (max-width: 768px) {
+    font-size: 0.4rem;
+  }
 }
 
 // Whatssap icon
@@ -272,6 +275,29 @@
 
     @media screen and (max-width: 940px) {
       padding-bottom: 13rem;
+      .property-title {
+        margin-bottom: 4rem;
+        h1 {
+          font-size: 35px;
+          span {
+            font-size: 25px;
+            margin-top: -1rem;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 480px) {
+      padding-bottom: 13rem;
+      .property-title {
+        margin-bottom: 4rem;
+        h1 {
+          font-size: 25px;
+          span {
+            font-size: 15px;
+            margin-top: -0.5rem;
+          }
+        }
+      }
     }
   }
 
@@ -802,14 +828,62 @@
       }
       @media screen and (max-width: 940px) {
         display: block;
+
         .property-details {
           width: 100%;
           top: 0;
           right: 0;
+          .head {
+            .ref {
+              font-size: 15px;
+            }
+          }
+          .body {
+            h2 {
+              font-size: 22px;
+            }
+            h3 {
+              font-size: 15px;
+            }
+            p strong {
+              font-size: 12;
+            }
+            .price {
+              font-size: 22px;
+            }
+          }
+          h2 {
+            font-size: 22px;
+          }
         }
       }
+
       @media screen and (max-width: 768px) {
         width: 90%;
+        .property-details {
+          .head {
+            .ref {
+              font-size: 13px;
+            }
+          }
+          .body {
+            h2 {
+              font-size: 19px;
+            }
+            h3 {
+              font-size: 13px;
+            }
+            p strong {
+              font-size: 10;
+            }
+            .price {
+              font-size: 19px;
+            }
+          }
+          h2 {
+            font-size: 19px;
+          }
+        }
       }
     }
 
@@ -911,11 +985,13 @@
         width: 90%;
         margin: 0 auto;
         display: block;
+
         .sell-Left {
           margin: 0;
           text-align: center;
           .logo {
-            width: 30%;
+            margin: auto;
+            width: 20%;
           }
           h1 {
             font-size: 20px;
@@ -945,13 +1021,13 @@
     max-height: 175vh;
     .prop-featured-title {
       h1 {
-        font-family: v.$special-font;
         letter-spacing: 4px;
         font-size: 55px;
         text-align: center;
         color: v.$white;
         font-weight: 300;
         span {
+          font-family: v.$special-font;
           font-weight: 400;
           font-size: 40px;
           display: block;
@@ -997,7 +1073,6 @@
           }
         }
       }
-
       // Button all prop
       .btn-all-prop {
         padding: 5rem;
@@ -1036,13 +1111,60 @@
         }
       }
     }
+
+    @media screen and (max-width: 768px) {
+      padding: 0;
+      margin-bottom: 40rem;
+      margin-top: 16rem !important;
+      .prop-featured-title {
+        h1 {
+          font-size: 35px;
+          span {
+            font-size: 25px;
+            margin-top: -1rem;
+          }
+        }
+      }
+      .prop-featured-info {
+        .btn-all-prop {
+          padding: 0;
+          width: 22rem;
+          a {
+            margin: 2rem;
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      margin-bottom: 10rem;
+      margin-top: 12rem !important;
+      .prop-featured-title {
+        h1 {
+          font-size: 25px;
+          span {
+            font-size: 15px;
+            margin-top: -0.5rem;
+          }
+        }
+      }
+      .prop-featured-info {
+        .btn-all-prop {
+          display: none;
+        }
+      }
+    }
   }
 
   // Welcome & description
   .description-inmovalley {
     background-color: v.$bg-color-primary;
     padding-top: 7rem;
-
+    margin-bottom: 1.5rem;
     .column {
       flex: 1;
       .img-icon {
@@ -1051,12 +1173,12 @@
       }
       p {
         margin-left: 10rem;
-        margin-top: 2rem;
         font-weight: 600;
         &.text1 {
           color: v.$color-secondary;
         }
         &.text2 {
+          margin-top: 2rem;
           color: v.$white;
         }
       }
@@ -1079,6 +1201,60 @@
         width: auto;
       }
     }
+    @media screen and (max-width: 940px) {
+      .text-left p,
+      .text-left .img-icon,
+      .text-left .btn {
+        margin: 0;
+        line-height: 2rem;
+      }
+
+      .img2 {
+        display: none;
+      }
+      .img-fluid {
+        width: 40%;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 0;
+      .text-left p,
+      .text-left .img-icon,
+      .text-left .btn {
+        margin: 0;
+        line-height: 2rem;
+        margin-left: 1rem;
+        font-size: 15px;
+      }
+      .text-left .img-icon {
+        margin: 1.5rem auto;
+
+        width: 40% !important;
+      }
+      .img1 {
+        display: none;
+      }
+      .img2 {
+        display: block;
+      }
+    }
+    @media screen and (max-width: 480px) {
+      margin: 12px;
+      .text-left p,
+      .text-left .img-icon,
+      .text-left .btn {
+        line-height: 1rem;
+        width: 90%;
+        font-size: 10px;
+      }
+      .img1 {
+        display: none;
+      }
+      .img2 {
+        display: none;
+      }
+    }
   }
 
   // Last News
@@ -1088,7 +1264,7 @@
     .container {
       .row {
         .col1 {
-          margin-left: 4rem;
+          // margin-left: 4rem;
           color: v.$darker;
           display: flex;
           align-items: center;
@@ -1096,7 +1272,7 @@
           .rotate-text {
             font-weight: 300;
             letter-spacing: 10px;
-            width: 60%;
+            width: 50%;
             margin-left: 16rem;
             margin-top: 6rem;
             font-size: 75px;
@@ -1106,7 +1282,7 @@
 
             img {
               margin-top: 5rem;
-              width: 7rem;
+
               transition: transform 0.7s;
               &:hover {
                 transform: rotateX(-180deg);
@@ -1223,6 +1399,73 @@
         }
       }
     }
+    @media screen and (max-width: 940px) {
+      padding: 2rem;
+      .container {
+        .row {
+          .col1 {
+            .rotate-text {
+              margin-left: 10rem;
+              margin-top: 2rem;
+              font-size: 35px;
+              transform: rotate(-90deg);
+              transform-origin: left bottom;
+              display: inline-block;
+              img {
+                margin-top: 2rem;
+                // width: 4rem;
+              }
+              span {
+                font-size: 2rem;
+                margin-top: -1.5rem;
+              }
+            }
+          }
+          .col2 {
+            margin-left: 4rem;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 2rem;
+      .container {
+        .row {
+          display: block;
+          .col1 {
+            margin: 0;
+            .rotate-text {
+              margin: auto;
+              margin-top: 2rem;
+              font-size: 35px;
+              transform: rotate(360deg);
+              transform-origin: top;
+              display: inline-block;
+              img {
+                margin-bottom: 2rem;
+                width: auto;
+              }
+              span {
+                font-size: 2rem;
+                margin-top: -1.5rem;
+              }
+            }
+          }
+          .col2 {
+            margin: 0;
+            width: 100%;
+            margin-bottom: 1rem;
+            // display: none;
+          }
+          .col3 {
+            width: 100%;
+            margin: 0;
+            // display: none;
+          }
+        }
+      }
+    }
   }
 
   // Contact US
@@ -1314,6 +1557,79 @@
         font-size: 11px;
         span {
           font-size: bold;
+        }
+      }
+    }
+
+    @media screen and (max-width: 940px) {
+      .contact-title {
+        padding: 2rem;
+        h1 {
+          font-size: 35px;
+          span {
+            font-size: 25px;
+            margin-top: -1rem;
+          }
+        }
+      }
+      .form-contact {
+        width: 90%;
+        margin: 0 auto;
+        .form-control {
+          font-size: 0.8rem;
+        }
+        .form-check-input {
+          &[type="checkbox"] {
+            width: 3rem;
+            height: 1.5rem;
+            margin-right: 1rem;
+          }
+        }
+        label {
+          font-size: 0.6rem;
+        }
+        button {
+          width: 100%;
+          font-size: 0.8rem;
+        }
+        p {
+          font-size: 0.8rem;
+        }
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .contact-title {
+        padding: 2rem;
+        h1 {
+          font-size: 25px;
+          span {
+            font-size: 15px;
+            margin-top: -0.5rem;
+          }
+        }
+      }
+      .form-contact {
+        width: 90%;
+        margin: 0 auto;
+        .form-control {
+          font-size: 0.6rem;
+        }
+        .form-check-input {
+          &[type="checkbox"] {
+            width: 2rem;
+            height: 1rem;
+            margin-right: 1rem;
+          }
+        }
+        label {
+          font-size: 0.6rem;
+        }
+        button {
+          width: 100%;
+          font-size: 0.6rem;
+        }
+        p {
+          font-size: 0.6rem;
         }
       }
     }

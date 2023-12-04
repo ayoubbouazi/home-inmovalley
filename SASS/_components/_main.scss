@@ -1255,6 +1255,9 @@
         display: none;
       }
     }
+    @media screen and (max-height: 600px) {
+      margin-top: 250px;
+    }
   }
 
   // Last News
@@ -1632,6 +1635,9 @@
           font-size: 0.6rem;
         }
       }
+    }
+    @media screen and (max-height: 600px) {
+      height: 150vh;
     }
   }
 }
